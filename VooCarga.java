@@ -1,21 +1,16 @@
 public class VooCarga extends Voo {
 
-	private int pesoCarga;
+    private int pesoCarga;
+    private int capacidadeMax;
+    private String InspectionSituation;
 
-	private int capacidadeMax;
+    public VooCarga(int codigo, String origem,  String destino,  int distancia, int combustivelDisponivel, boolean situacaoDocumento, int pesoCarga, int pacidadeMax, String InspectionSituation) {}
 
-	private String InspectionSituation;
+    @Override
+    void calculoCombustivel(double combustivelN, int distancia, int pesoCarga) {
+        combustivelDisponivel = (distancia*0.15)+ (pesoCarga*0.02);
+    }
 
-	public VooCarga(int codigo, String origem,  String destino,  int distancia, int combustivelDisponivel, boolean situacaoDocumento, int pesoCarga, int pacidadeMax, String InspectionSituation) {
-
-	}
-
-	public void calculoCombustivel() {
-
-	}
-
-	public void calculoValorFinal() {
-
-	}
-
+    @Override
+    void calculoValorFinal(int distancia, double valor, int qtdPassageiros) {}
 }

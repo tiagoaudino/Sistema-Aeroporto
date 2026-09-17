@@ -1,35 +1,17 @@
-public abstract class Voo implements Autorizacao {
+abstract class Voo{
 
-	private int codigo;
+        protected int codigo;
+        protected String origem;
+        protected String destino;
+        protected int distancia;
+        protected double combustivelDisponivel;
+        protected double combustivelN;
+        protected boolean situacaoDocumento;
+        protected double valor;
 
-	private String origem;
+        abstract void calculoCombustivel(double combustivelN, int distancia);
 
-	private String destino;
+        abstract void calculoCombustivel(double combustivelN, int distancia, int pesoCarga);
 
-	private int distancia;
-
-	private int combustivelDisponivel;
-
-	private boolean situacaoDocumento;
-
-	public abstract void calculoCombustivel();
-
-	public abstract void calculoValorFinal();
-
-
-	/**
-	 * @see Autorizacao#autorizacaoDecolagem()
-	 */
-	public boolean autorizacaoDecolagem() {
-		return false;
-	}
-
-
-	/**
-	 * @see Autorizacao#getMotivoPend()
-	 */
-	public String getMotivoPend() {
-		return null;
-	}
-
-}
+        abstract void calculoValorFinal(int distancia, double valor, int qtdPassageiros);
+    }

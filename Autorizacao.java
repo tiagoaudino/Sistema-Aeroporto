@@ -1,7 +1,4 @@
 public interface Autorizacao {
-
-	public abstract boolean autorizacaoDecolagem();
-
-	public abstract String getMotivoPend();
-
+    public abstract boolean autorizacaoDecolagem();
+    public abstract String getMotivoPend();
 }
