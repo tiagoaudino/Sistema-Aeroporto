@@ -44,5 +44,3 @@ O projeto aplica conceitos de Programação Orientada a Objetos, como:
 
 <img width="600" height="356" alt="image" src="https://github.com/user-attachments/assets/52c3b092-e327-4501-8a3e-8a8b7e1ede3e" />
 
-
-Tiago Audino
