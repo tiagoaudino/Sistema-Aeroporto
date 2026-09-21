@@ -5,13 +5,34 @@ abstract class Voo{
         protected String destino;
         protected int distancia;
         protected double combustivelDisponivel;
-        protected double combustivelN;
+        protected double combustivelNecessario;
         protected boolean situacaoDocumento;
         protected double valor;
 
-        abstract void calculoCombustivel(double combustivelN, int distancia);
+        public Voo(int codigo, String origem, String destino, int distancia, double combustivelDisponivel, boolean situacaoDocumento) {
+                this.codigo = codigo;
+                this.origem = origem;
+                this.destino = destino;
+                this.distancia = distancia;
+                this.combustivelDisponivel = combustivelDisponivel;
+                this.situacaoDocumento = situacaoDocumento;
+        }
 
-        abstract void calculoCombustivel(double combustivelN, int distancia, int pesoCarga);
+        public abstract void calculoCombustivel();
+        public abstract void calculoValorFinal();
+        public int getCodigo() {
+                return codigo;
+        }
 
-        abstract void calculoValorFinal(int distancia, double valor, int qtdPassageiros);
-    }
+        public double getValor() {
+                return valor;
+        }
+        @Override
+        public String toString() {
+                return "Codigo: " + codigo +
+                        " | Origem: " + origem +
+                        " | Destino: " + destino +
+                        " | Distancia: " + distancia +
+                        " km | Valor: R$ " + valor;
+        }
+}
